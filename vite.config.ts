@@ -20,5 +20,12 @@ export default defineConfig({
     port: 3000,
     strictPort: true,
     host: true,
+    proxy: {
+      '/api': {
+        target: 'https://localhost:7001', // Your .NET API Address
+        changeOrigin: true,
+        secure: false,
+      },
+    },
   },
 });
