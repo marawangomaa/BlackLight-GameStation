@@ -22,7 +22,7 @@ export default defineConfig({
     host: true,
     proxy: {
       '/api': {
-        target: 'https://localhost:7001', // Your .NET API Address
+        target: 'http://localhost:57190', // Updated to match your running API port
         changeOrigin: true,
         secure: false,
       },
