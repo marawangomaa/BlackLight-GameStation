@@ -67,11 +67,6 @@ const Login: React.FC<{ onLogin: (u: User) => void, onSwitch: () => void, isAr: 
             Don't have an account? <button type="button" onClick={onSwitch} className="text-yellow-400 font-bold hover:underline">Register now</button>
           </p>
         </form>
-
-        <div className="bg-zinc-900/30 p-4 rounded-2xl border border-zinc-800 text-center">
-            <p className="text-[10px] text-zinc-600 font-bold uppercase mb-2">Demo Admin Access</p>
-            <p className="text-[10px] text-zinc-400">blacklight@game.com / Mm123456!</p>
-        </div>
       </div>
     </div>
   );

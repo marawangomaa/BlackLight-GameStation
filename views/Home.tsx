@@ -20,6 +20,7 @@ const Home: React.FC<HomeProps> = ({ isAr, onEnter, isLoggedIn }) => {
   }, []);
 
   const displayedAds = showAllAds ? ads : ads.slice(0, 2);
+  const currentYear = new Date().getFullYear();
 
   return (
     <div className="space-y-32 animate-in fade-in pb-32">
@@ -50,7 +51,7 @@ const Home: React.FC<HomeProps> = ({ isAr, onEnter, isLoggedIn }) => {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-yellow-200 to-yellow-500 drop-shadow-[0_0_30px_rgba(255,215,0,0.5)] animate-pulse">LIGHT</span>
               </h1>
               <div className="absolute -top-4 -right-12 hidden md:block">
-                <div className="bg-yellow-400 text-black px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest rotate-12 shadow-xl">EST. 2024</div>
+                <div className="bg-yellow-400 text-black px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest rotate-12 shadow-xl">EST. {currentYear}</div>
               </div>
             </div>
             
@@ -81,7 +82,7 @@ const Home: React.FC<HomeProps> = ({ isAr, onEnter, isLoggedIn }) => {
         {/* Floating Socials Bar */}
         <div className="absolute bottom-12 right-12 z-20 hidden lg:flex flex-col gap-6">
            <a href="https://www.facebook.com/profile.php?id=61556427669036" target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-yellow-400 transition-colors"><Facebook size={20}/></a>
-           <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-yellow-400 transition-colors"><Instagram size={20}/></a>
+           <a href="http://instagram.com" target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-yellow-400 transition-colors"><Instagram size={20}/></a>
            <div className="h-20 w-px bg-zinc-800 mx-auto"></div>
            <span className="text-[10px] font-black text-zinc-500 uppercase tracking-widest [writing-mode:vertical-lr]">FOLLOW US</span>
         </div>
