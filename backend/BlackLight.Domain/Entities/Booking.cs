@@ -1,4 +1,3 @@
-
 using System;
 
 namespace BlackLight.Domain.Entities
@@ -6,8 +5,11 @@ namespace BlackLight.Domain.Entities
     public class Booking : BaseEntity
     {
         public Guid RoomId { get; set; }
-        public Room Room { get; set; }
-        public string UserId { get; set; }
+        public Room? Room { get; set; }
+        
+        public string UserId { get; set; } = string.Empty;
+        public ApplicationUser? User { get; set; }
+        
         public DateTime StartTime { get; set; }
         public int DurationHours { get; set; }
         public decimal TotalPrice { get; set; }
